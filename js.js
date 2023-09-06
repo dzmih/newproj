@@ -38,14 +38,71 @@
 // let a = 0
 // let b = 0
 // console.log(a, b)
-const ansFilms = +prompt("how many films have you watched yet: ", "");
+const ansFilm = +prompt("how many films have you watched yet: ", "");
 objFilms = {
-    count: ansFilms,
+    count: ansFilm,
     movies: {},
     actors: {},
     genres: [],
     privat: false,
 };
-const lastFilWatched = prompt("What last film you have watched: ", "")
-const grade = +prompt("How do you grade it?: ", "")
+let lastFilWatched = '';
+let grade = 0;
+if(ansFilm > 0){
+    while (grade <= 0 || lastFilWatched.length <= 0 || lastFilWatched.length >= 50){
+        for(let i = 0; i <= ansFilm; i++){
+            lastFilWatched = prompt("What last film you have watched: ", "")
+            grade = +prompt("How do you grade it?: ", "")
+    
+            objFilms.movies[lastFilWatched] = grade;
+        }
+    }
+}
+else{
+    const ansFilms = +prompt("Сколько фильмов вы смотрели");
+    if(ansFilms < 10){
+        alert("мало фильмов");
+    } else if(ansFilms >= 10 && ansFilms <= 20) {
+        alert("вы обычный зритель");
+    }
+    else{
+        alert("вы настоящий киноман!");
+    }
+}
 objFilms.movies[lastFilWatched] = grade;
+// const num = +prompt("input num", "")
+// // console.log(1!=1 ? "hello" : 'zalupa')
+// switch (num) {
+//     case 1:
+//         console.log(1)
+//         break;
+//     case 2:
+//         console.log(2)
+//         break;
+//     case 3:
+//         console.log(3)
+//         break;
+//     case 4:
+//         console.log(4)
+//         break;
+//     case 5:
+//         console.log(5)
+//         break;
+// }
+// let fries = false
+// let hamburger = true
+// console.log(fries && hamburger ? "fries and hamburger" : fries == true ? "fries" : "hamburger")
+// console.log( 5 === 5 && 3 > 1 || 5
+// num = 0;
+// while( num <= 10 ){
+//     console.log(num);
+//     num++;
+// }
+// let res = '';
+// for(let i = 1; i <= 10; i++){
+//     for(let j = 0; j < i; j++){
+//         res += '*'
+//     }
+//     res += '\n'
+// }
+// console.log(res)
