@@ -38,3 +38,14 @@
 // let a = 0
 // let b = 0
 // console.log(a, b)
+const ansFilms = +prompt("how many films have you watched yet: ", "");
+objFilms = {
+    count: ansFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+};
+const lastFilWatched = prompt("What last film you have watched: ", "")
+const grade = +prompt("How do you grade it?: ", "")
+objFilms.movies[lastFilWatched] = grade;
