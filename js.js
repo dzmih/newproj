@@ -35,6 +35,6 @@
 // obj['surname'] = prompt("your surname: ", "")
 // obj['age'] = +prompt("your age: ")
 // console.log(obj)
-let a = 0
-let b = 0
-console.log(a, b)
+// let a = 0
+// let b = 0
+// console.log(a, b)
