@@ -48,9 +48,9 @@ objFilms = {
 };
 let lastFilWatched = '';
 let grade = 0;
-if(ansFilm > 0){
+if(ansFilm.length <= 0){
     while (grade <= 0 || lastFilWatched.length <= 0 || lastFilWatched.length >= 50){
-        for(let i = 0; i <= ansFilm; i++){
+        for(let i = 0; i <= ansFilm - 1; i++){
             lastFilWatched = prompt("What last film you have watched: ", "")
             grade = +prompt("How do you grade it?: ", "")
     
@@ -69,7 +69,23 @@ else{
         alert("вы настоящий киноман!");
     }
 }
-objFilms.movies[lastFilWatched] = grade;
+const genres = [];
+function writeYourGenres(){
+    for(let i = 0; i <= 2; i++){
+        genres[i] = prompt(`your favourite genre number ${i + 1}`)
+    }
+}
+writeYourGenres();
+console.log(genres)
+function showMyDB () {
+    if(objFilms.privat === false){
+        console.log(objFilms.movies)
+    } else {
+        console.log("i can't show it")
+    }
+}
+showMyDB();
+// objFilms.movies[lastFilWatched] = grade;
 // const num = +prompt("input num", "")
 // // console.log(1!=1 ? "hello" : 'zalupa')
 // switch (num) {
@@ -106,3 +122,24 @@ objFilms.movies[lastFilWatched] = grade;
 //     res += '\n'
 // }
 // console.log(res)
+// function showFirstMessage(a){
+//     console.log(a)
+// }
+// showFirstMessage('asdasd');
+// function convert(amount){
+//     let res = 28 * amount;
+//     console.log(res);
+//     return res;
+// }
+// let res = convert(3);
+// console.log(res)
+str = "bitch fruit"
+// console.log(str.indexOf('f', 't'));
+// console.log(str.substring(6, 11))
+// function stoi (str) {
+//     for(let i = 0; i < str.length; i++){
+//         if(str[i].)
+//     }
+// }
+
+
